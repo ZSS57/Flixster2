@@ -1,27 +1,28 @@
 # Codepath-Flixster
-# Project 2 - *Flixster*
+# Project 3 - *Flixster*
 
 Submitted by: **Sha Zhao**
 
-**Flixster** is a movie browsing app that can show the popularity, votes, vote average and summary.
+**Flixster** is a movie browsing app that can show the movie that are playing currently, and can see the posters.
 
-Time spent: **6** hours spent in total
+Time spent: **10** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [X] Users are able to see a customized app icon and launch screen
-- [X] Your app should work for any screen size and orientation using AutoLayout constraints
-  - [X] Mark here if you will demostrate auto layout implemention as horizontal rotation or different phone size or both, then erase this text
-- [X] Displays at least 5 different movies in a table view
-- [X] Can tap into detail view of movie with a full description, backdrop image, and title
+- [X] Implement network call and table view to display a list of movies currently playing (title, description, image)
+- [X] App has a collection view with the same list of movies
+- [X] Uses a tab bar controller to switch between collection view and table view screens
  
 The following **optional** features are implemented:
 
-- [X] Unique UI changes, such as background, font/color changes, etc.
-- [ ] User implements a collection view
-- [ ] User implemenets tab bar controller with at least two screens
+- [ ] Make an additional network call to another end-point.    
+- [ ] Allow users to scroll when context items are off-screen (table view implemention)
+
+The following **additional** features are implemented:
+
+- [ ] List anything else that you can get done to improve the app functionality!
 
 ## Video Walkthrough
 
@@ -29,11 +30,7 @@ Here's a walkthrough of implemented user stories:
 
         Iphone 14 pro
 
-<img src='https://github.com/ZSS57/Codepath-Flixster/blob/main/FlixsterGIF-iphone14.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-        Ipad mini
-
-<img src='https://github.com/ZSS57/Codepath-Flixster/blob/main/FlixsterGIF-ipadmini.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/ZSS57/Codepath_Flixster2/blob/main/FlixsterGIF-iphone14-movielist.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 GIF created with LICEcap.
@@ -43,10 +40,9 @@ GIF created with LICEcap.
 
 Describe any challenges encountered while building the app.
 
-        1, The layout of Detail view controller cost me lots of time.
+        1, The Json were not able to read correctly since the data type is not right.
         2, The image can not show properly.
-        3, The label can not show full text.
-        4, Code part is difficult.
+        3, The Api for the poster took me couple of hours. 
 
 ## License
 
