@@ -30,7 +30,7 @@ Here's a walkthrough of implemented user stories:
 
         Iphone 14 pro
 
-<img src='https://github.com/ZSS57/Codepath_Flixster2/blob/main/FlixsterGIF-iphone14-movielist.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/ZSS57/Codepath_Flixster2/blob/main/FlixsterGIF-iphone14-movielist2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 GIF created with LICEcap.
