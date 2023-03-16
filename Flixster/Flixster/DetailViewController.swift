@@ -30,6 +30,9 @@ class DetailViewController: UIViewController {
         let posterUrl=URL(string: baseUrl + posterPath)
         
         Nuke.loadImage(with: posterUrl!, into: trackImageView)
+        
+        //Nuke.loadImage(with:URL(string:"https://image.tmdb.org/t/p/w500" + track.poster_path.absoluteString)!, into: trackImageView)
+
 
             // Set labels with the associated track values.
             trackNameLabel.text = track.title

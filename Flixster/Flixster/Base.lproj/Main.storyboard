@@ -287,6 +287,7 @@
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="posterImageView" destination="iDt-1h-4xG" id="rIv-li-VQv"/>
+                                            <segue destination="WgW-3b-CZ7" kind="show" id="WGY-0x-GkK"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -303,7 +304,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Posters" id="qa7-LE-7Lj"/>
                     <connections>
-                        <outlet property="collectionView" destination="F1o-rw-ujk" id="mEL-Lj-Ocs"/>
+                        <outlet property="collectionView" destination="F1o-rw-ujk" id="brN-oQ-jZQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1nb-F1-kYE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -335,6 +336,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="CzN-4v-jLn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JEY-Y1-dD6">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -367,6 +369,9 @@
             <point key="canvasLocation" x="2859" y="-932"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="WGY-0x-GkK"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="film" catalog="system" width="128" height="93"/>
         <image name="film.circle" catalog="system" width="128" height="123"/>

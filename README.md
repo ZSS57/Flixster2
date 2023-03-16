@@ -32,7 +32,6 @@ Here's a walkthrough of implemented user stories:
 
 <img src='https://github.com/ZSS57/Codepath_Flixster2/blob/main/FlixsterGIF-iphone14-movielist2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-
 GIF created with LICEcap.
 
 
@@ -40,9 +39,9 @@ GIF created with LICEcap.
 
 Describe any challenges encountered while building the app.
 
-        1, The Json were not able to read correctly since the data type is not right.
-        2, The image can not show properly.
-        3, The Api for the poster took me couple of hours. 
+        1, When I tap the poster, it hasfoung nil error, because I forget the overide fun prepare to pass data.
+        2, I was struglling with the link. and how to show poster_path correctly.
+        3, Code part is difficult.
 
 ## License
 

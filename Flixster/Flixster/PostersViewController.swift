@@ -12,27 +12,31 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
     
     //  Add a track property
     var track: Track!
+    
+    
 
     
-    var posters: [Poster] = []
+    //var posters: [Poster] = []
+    var tracks: [Track] = []
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        posters.count
+        tracks.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PosterCell", for: indexPath) as! PosterCell
 
         // Use the indexPath.item to index into the albums array to get the corresponding album
-        let poster = posters[indexPath.item]
+        let track = tracks[indexPath.item]
 
         // Get the artwork image url
         //let imageUrl = "https://image.tmdb.org/t/p/w185" + poster.poster_path
         
         let baseUrl = "https://image.tmdb.org/t/p/w185"
-        let posterPath = poster.poster_path.absoluteString
+        let posterPath = track.poster_path.absoluteString
         
         let posterUrl=URL(string: baseUrl + posterPath)
-
+        
+ 
         // Set the image on the image view of the cell
         Nuke.loadImage(with: posterUrl!, into: cell.posterImageView)
 
@@ -71,15 +75,15 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
             let decoder = JSONDecoder()
             do {
                 // Try to parse the response into our custom model
-                let response = try decoder.decode(PosterSearchResponse.self, from: data)
-                let posters = response.results
+                let response = try decoder.decode(TracksResponse.self, from: data)
+                let tracks = response.results
                 
                 DispatchQueue.main.async {
-                    self?.posters = posters
+                    self?.tracks = tracks
                     self?.collectionView.reloadData()
                 }
 
-                print(posters)
+                print(tracks)
             } catch {
                 print(error.localizedDescription)
             }
@@ -127,5 +131,24 @@ class PostersViewController: UIViewController, UICollectionViewDataSource {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //  Pass the selected track to the detail view controller
+        // Get the cell that triggered the segue
+        if let cell = sender as? UICollectionViewCell,
+           // Get the index path of the cell from the table view
+           let indexPath = collectionView.indexPath(for: cell),
+           // Get the detail view controller
+           let detailViewController = segue.destination as? DetailViewController {
+
+            // Use the index path to get the associated track
+            let track = tracks[indexPath.row]
+
+            // Set the track on the detail view controller
+            detailViewController.track = track
+        }
+
+
+    }
 
 }
